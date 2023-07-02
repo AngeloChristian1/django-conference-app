@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Delete speaker</title>
+    <style>
+
+     body{
+    background:linear-gradient(to right, #000111,#101000);
+    width:100vw;
+    overflow-X:hidden;
+    font-family:'system-ui'
+    }
+        .container{
+        color:white;
+        width:80%;
+        margin:auto;text-align:center;
+        }
+        h1{
+        color:orange;
+        }
+
+          .speaker{
+              width: 70%;
+              margin: auto;
+              display: flex;
+              justify-content: space-between;
+              align-items:center ;
+              padding:0px 20px;
+              border: 1px solid white;
+          }
+
+            .speaker p:first-child{
+              font-size: 1.1em;
+              font-weight: 300;
+              padding:10px;
+
+          }
+          .speaker p:nth-child(2){
+
+              width:70%;
+              text-align:left;
+          }
+          .homeLink a, button{
+
+          text-decoration:none;
+          background:orange;
+          padding:10px 25px;
+          border-radius:40px;
+          color:black;
+          font-weight:600;
+          border:none;
+          margin:0px 5px;
+          font-weight:600;
+          }
+          button{
+          padding:13px 20px;
+          font-size:1em;
+          font-weight:600;
+          transition:.2s;
+          }
+          .homeLink a:hover{
+          background:#FF8010;
+          }
+          button:hover{
+          background:#FF8010;
+
+          }
+
+          .homeLinki a{display:none;}
+          .llinks{
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          margin-top:20px;
+          }
+
+            .about{
+          text-align:center;
+          }
+          .title{
+          text-transform:uppercase;
+          font-size:1.3em;
+          color:orange;
+          }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1> Speaker Delete details</h1>
+
+    <hr/>
+    <h3>Name</h3>
+    <h3 class="name">{{ speaker.name }}</h3>
+     <div>
+        <div class="speaker">
+        <p>Organisation</p>
+        <p>{{ speaker.organisation }}</p>
+    </div>
+          <div>
+        <div class="speaker">
+        <p>Topic</p>
+        <p>{{ speaker.topic }}</p>
+    </div>
+
+    <div>
+        <div class="speaker">
+        <p>Address</p>
+        <p>{{ speaker.address }}</p>
+            </hr>
+    </div>
+
+    <div class="speaker">
+        <p>Biography</p>
+        <p>{{ speaker.biography }}</p>
+    </div >
+
+
+    </div>
+        <div class="llinks">
+
+         <form action="" method="POST">{% csrf_token %}
+              <div class="homeLink">
+                  <button type="submit">Delete</button>
+        </div>
+
+            </form>
+    <div class="homeLink">
+        <a href="/speaker/update/{{speaker.id}}">Update Instead</a>
+        </div>
+            <div class="homeLink">
+        <a href="/speaker">HOME</a>
+
+        </div>
+        </div>
+
+    </div>
+
+     </div>
+</div>
+
+
+</body>
+</html>

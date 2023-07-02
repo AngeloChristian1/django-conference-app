@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+      body{
+    background:linear-gradient(to right, #000111,#101000);
+    width:100vw;
+    overflow-X:hidden;
+    font-family:'system-ui',monospace,arial
+
+    }
+        .container{
+        color:white;
+        width:80%;
+        margin:auto;text-align:center;
+        }
+        h1{
+        color:orange;
+        }
+
+ table,tr,th,td{
+             border: 1px solid white;
+             border-collapse: collapse;
+              padding: 12px;
+              text-align: left;
+          }
+          th{
+          color:orange;
+          text-align:center;
+          }
+
+          tr td:nth-child(2){
+          text-align:center;
+          }
+
+          table{
+              width: 70%;
+              margin: auto;
+              margin-top: 60px;
+          }
+           .homeLink a:hover{
+          background:#FF8010;
+          }
+          button:hover{
+          background:#FF8010;
+
+          }
+
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+<h1>WELCOME TO OUR CONFERENCE MANAGEMENT PROJECT</h1>
+<h3>THIS IS THE SPEAKER APP</h3>
+    <div class="links">
+        <div class="linkTitle"><h3>Quick Links</h3></div>
+        <div>
+           <table>
+               <tr>
+                   <th>Link</th>
+                   <th>url</th>
+               </tr>
+               <tr>
+                   <td>Home</td>
+                   <td>speaker/</td>
+               </tr>
+               <tr>
+                   <td>create</td>
+                   <td>speaker/create</td>
+               </tr>
+               <tr>
+                   <td>delete</td>
+                   <td>speaker/delete/id</td>
+               </tr>             <tr>
+                   <td>update</td>
+                   <td>speaker/update/id</td>
+               </tr>             <tr>
+                   <td>read 0ne</td>
+                   <td>speaker/read_one/id</td>
+               </tr>             <tr>
+                   <td>read All</td>
+                   <td>speaker/read_all</td>
+               </tr>
+           </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

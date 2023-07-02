@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Delete Conference</title>
+    <style>
+    body{
+    background:linear-gradient(to right, #000111,#101000);
+    width:100vw;
+    overflow-X:hidden;
+    font-family:'system-ui'
+    }
+        .container{
+        color:white;
+        width:80%;
+        margin:auto;text-align:center;
+        }
+        h1{
+        color:orange;
+        }
+
+          .conference{
+              width: 70%;
+              margin: auto;
+              display: flex;
+              justify-content: space-between;
+              align-items:center ;
+              padding:0px 20px;
+              border: 1px solid white;
+              text-align:center;
+          }
+
+          .conference p:first-child{
+              font-size: 1.1em;
+              font-weight: 300;
+              padding:10px;
+
+          }
+          .conference p:nth-child(2){
+
+              width:70%;
+              text-align:left;
+          }
+          .homeLink a{
+          text-decoration:none;
+          background:orange;
+          padding:10px 25px;
+          border-radius:40px;
+          color:black;
+          font-weight:600;
+
+
+          }
+          .homeLink{
+          padding:20px;
+          transform: translateY(10%);
+          }
+          .homeLinki a{display:none;}
+          .llinks{
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          margin-top:20px;
+          }
+          .about{
+          text-align:center;
+          }
+          .title{
+          text-transform:uppercase;
+          font-size:1.3em;
+          color:orange;
+          }
+           .homeLink a:hover{
+          background:#FF8010;
+          }
+          button:hover{
+          background:#FF8010;
+
+          }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Conference Details</h1>
+
+    <hr/>
+    <h3>Title</h3>
+    <h3 class="title">{{ conference.title }}</h3>
+     <div>
+        <div class="conference">
+        <p>Organiser</p>
+        <p>{{ conference.organiser }}</p>
+    </div>
+         <div class="conference">
+        <p>Location</p>
+        <p>{{ conference.location }}</p>
+         </div >
+
+             <div>
+        <div class="conference">
+        <p>Date</p>
+        <p>{{ conference.date }}</p>
+            </hr>
+    </div>
+          <div>
+        <div class="conference">
+        <p>Time</p>
+        <p>{{ conference.time }}</p>
+    </div>
+              <div>
+        <div class="conference about">
+        <p>About Conference</p>
+        <p>{{ conference.about }}</p>
+
+    </div>
+
+
+
+
+    </div>
+        <div class="llinks">
+        <div class="homeLink">
+          <a href="/conference/delete/{{conference.id}}">Delete</a>
+        </div>
+
+        <div class="homeLink">
+          <a href="/conference/update/{{conference.id}}">Update</a>
+        </div>
+
+            <div class="homeLink">
+        <a href="/conference">HOME</a>
+        </div>
+        </div>
+
+    </div>
+             </div>
+     </div>
+</div>
+
+</body>
+</html>
+

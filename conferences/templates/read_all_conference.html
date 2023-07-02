@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <style>
+              body{
+    background:linear-gradient(to right, #000111,#101000);
+    width:100vw;
+    overflow-X:hidden;
+    font-family:'system-ui';
+    }
+        .container{
+        color:white;
+        width:80%;
+        margin:auto;text-align:center;
+        }
+        h1{
+        color:orange;
+        }
+
+ table,tr,th,td{
+             border: 1px solid white;
+             border-collapse: collapse;
+              padding: 8px;
+              text-align: left;
+          }
+          th{
+          color:orange;
+          text-align:center;
+          }
+
+          table{
+              min-width: 70%;
+              margin: auto;
+              margin-top: 60px;
+          }
+
+           table a{
+          color:yellow;
+         text-decoration:none;
+          font-size:1em;
+          text-transform:uppercase;
+          }
+          table a:hover{
+          color:#FF8010;
+          }
+           .homeLink a:hover{
+          background:#FF8010;
+          }
+          button:hover{
+          background:#FF8010;
+
+          }
+
+   </style>
+    <title>Read All Conferences</title>
+  </head>
+  <body>
+  <div class="container">
+    <h1>ALL CONFERENCES</h1>
+
+    <hr/>
+
+    <table>
+        <tr>
+
+            <th>Id</th>
+
+            <th>Name</th>
+            <th>Organisers</th>
+            <th>Location</th>
+            <th>Date</th>
+            <th>Time</th>
+        </tr>
+
+        {% for conference in conferences %}
+            <tr>
+
+                <td>{{ conference.id }}</td>
+                <td><a href="/conference/read_one/{{conference.id}}">{{ conference.title }}</a></td>
+
+                <td>{{ conference.title }}</td>
+                <td>{{ conference.organiser }}</td>
+                <td>{{ conference.location }}</td>
+                <td>{{ conference.date }}</td>
+                <td>{{ conference.time }}</td>
+            </tr>
+        {% endfor %}
+
+
+    </table>
+</div>
+  </body>
+</html>
