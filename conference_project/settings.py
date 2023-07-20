@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'core',
     'conferences',
     'speakers',
+    'django_bootstrap5',
 
 
 ]

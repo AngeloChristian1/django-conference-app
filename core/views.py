@@ -18,3 +18,7 @@ def testing_stuff(request, number):
     # if id < 5:
     #     number = 'xzy'
     return render(request, 'testing.html', {'number': number})
+
+
+def home(request):
+    return render(request,'index.html')
